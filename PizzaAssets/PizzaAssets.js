@@ -1,3 +1,4 @@
+
 export const pizzaBuilder = {
     size: [
       {
@@ -15,96 +16,113 @@ export const pizzaBuilder = {
     ],
     vegetable_toppings: [
       {
-        toppings: "Tomatoes",
-        value: 60
+        name: "Tomatoes",
+        value: 60,
+        onCheckState: false
       },
       {
-        toppings: "Red Onion",
-        value: 23
+        name: "Red Onion",
+        value: 23,
+        onCheckState: false
       },
       {
-        toppings: "Green Pepper",
-        value: 40
+        name: "Green Pepper",
+        value: 40,
+        onCheckState: false
       },
       {
-        toppings: "Chilly",
-        value: 35
+        name: "Chilly",
+        value: 35,
+        onCheckState: false
       },
       {
-        toppings: "Mushroom",
-        value: 55
+        name: "Mushroom",
+        value: 55,
+        onCheckState: false
       },
       {
-        toppings: "Grilled Zucchini",
-        value: 35
+        name: "Grilled Zucchini",
+        value: 35,
+        onCheckState: false
       },
       {
-        toppings: "Green Olives",
-        value: 65
+        name: "Green Olives",
+        value: 65,
+        onCheckState: false
       } 
     ],
     non_vegetable_toppings: [
       {
-        toppings: "Pepperoni",
-        value: 88
+        name: "Pepperoni",
+        value: 88,
+        onCheckState: false
       },
       {
-        toppings: "Bacon",
-        value: 120
+        name: "Bacon",
+        value: 120,
+        onCheckState: false
       },
       {
-        toppings: "Chicken",
-        value: 120
+        name: "Chicken",
+        value: 120,
+        onCheckState: false
       },
       {
-        toppings: "Steak Strip",
-        value: 120
+        name: "Steak Strip",
+        value: 120,
+        onCheckState: false
       },
       {
-        toppings: "Italian Ham",
-        value: 50
+        name: "Italian Ham",
+        value: 50,
+        onCheckState: false
       },
       {
-        toppings: "Chorizo Sausage",
-        value: 70
+        name: "Chorizo Sausage",
+        value: 70,
+        onCheckState: false
       },
     ],
     cheese: [
       {
         name: "cheese",
         value:70,
+        onCheckState: false
       },
       {
         name: "Feta Cheese",
         value:95,
-      },
-      {
-        name: "Parmesan Cheese",
-        value:95,
+        onCheckState: false
       },
       {
         name: "Parmesan Cheese",
         value: 78,
+        onCheckState: false
       },
       {
         name: "Extra Cheese",
         value: 50,
+        onCheckState: false
       },
       {
         name: "Four Cheese",
         value: 150,
+        onCheckState: false
       },
       {
         name: "Goat Cheese",
         value: 90,
+        onCheckState: false
       },
       {
         name: "Mozzarella",
         value: 80,
+        onCheckState: false
       },
       {
         name: "Dairy Free Cheese",
-        value: 140
+        value: 140,
+        onCheckState: false
       }
     ]
   }

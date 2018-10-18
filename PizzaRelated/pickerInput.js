@@ -6,9 +6,9 @@ import {pizzaBuilder} from '../PizzaAssets/PizzaAssets'
 
 class pickerInput extends Component{
 
-pickerChoicesLoop =()=> pizzaBuilder.size.map(val =>{
+pickerChoicesLoop =()=> pizzaBuilder.size.map((val,index) =>{
     return(
-        <Picker.Item label={val.inches} value={val.value}/>
+        <Picker.Item label={val.inches} value={val.value} key={index}/>
     )
 })
     render(){ 
