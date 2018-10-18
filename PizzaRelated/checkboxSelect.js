@@ -4,28 +4,34 @@ import {CheckBox,View,Text,StyleSheet} from 'react-native'
 
 import {pizzaBuilder} from '../PizzaAssets/PizzaAssets'
 
-class checkbocSelect extends Component{
+class checkboxSelect extends Component{
 
     checkboxLoop =()=> pizzaBuilder.vegetable_toppings.map(val =>{
         return(
-            <CheckBox label={val.inches} value={val.value}/>
+            <View style={styles.checkText}>
+                <CheckBox value={false}
+                testID="dsf"
+                />
+                    <Text style={{marginTop: 5}}> {val.toppings}</Text>
+            </View>
         )
     })
+    check=()=>{}
     render(){
         return(
-            <View>
-                <Text>dfdsfsdf</Text>
-            </View>
-//             <View style={{ flexDirection: 'column'}}>
-//   <CheckBox />
-//   <View style={{ flexDirection: 'row' }}>
-//     <CheckBox
-//       value="sad"
-//     />
-//     <Text style={{marginTop: 5}}> this is checkbox</Text>
-//   </View>
-// </View>
+        
+                <View style={{ flexDirection: 'column' }}>
+                     {this.checkboxLoop()}
+                </View>
+        
         )
     }
 }
-export default checkbocSelect;
+
+const styles = StyleSheet.create({
+    checkText: {
+      flexDirection: "row",
+    },
+    
+  });
+export default checkboxSelect;

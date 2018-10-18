@@ -11,9 +11,6 @@ pickerChoicesLoop =()=> pizzaBuilder.size.map(val =>{
         <Picker.Item label={val.inches} value={val.value}/>
     )
 })
-getsizeValue=name=>{
-    alert(name)
-}
     render(){ 
         return(
         <View style={styles.firstView}>
