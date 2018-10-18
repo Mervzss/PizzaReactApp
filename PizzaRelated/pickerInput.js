@@ -14,11 +14,11 @@ pickerChoicesLoop =()=> pizzaBuilder.size.map(val =>{
 getsizeValue=name=>{
     alert(name)
 }
-    render(){
+    render(){ 
         return(
         <View style={styles.firstView}>
             <Picker
-            selectedValue={this.getsizeValue}
+            selectedValue={this.props.getsizeValue}
             style={styles.pickerStyle}
             onValueChange={(itemValue) => this.props.sizeValue(itemValue)}
             >

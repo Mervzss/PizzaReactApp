@@ -3,29 +3,25 @@ import React, { Component } from 'react';
 
 //REACT-NATIVE LIB
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
-  Picker
 } from 'react-native';
 import PickerInputPart from './PizzaRelated/pickerInput';
+import CheckBocSelect from './PizzaRelated/checkboxSelect'
 // PIZZA ASSETS
 export default class App extends Component {
-  //initialized State
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     size: null,
-  //     vegetableToppings:null,
-  //     nonVegetableToppings: null,
-  //     Cheese:null,
-  //     pizzaSize: [{try:"First"},"Second","Third"]
-  //   }
-  // }
-  state={
-    size:0
+
+  constructor(props){
+    super(props);
+    this.state={
+      size: null,
+      vegetableToppings:null,
+      nonVegetableToppings: null,
+      Cheese:null,
+    }
   }
+
 
   guard =()=> this.state.pizzaSize.map(name =>{
     return(
@@ -44,9 +40,9 @@ export default class App extends Component {
         <Text style={styles.headText}>Pizza Builder</Text>
         <View style={styles.firstView}>
         <Text style={styles.pickerText}>Size:</Text>
-        <PickerInputPart sizeValue={this.addSizeValue} />
+        <PickerInputPart sizeValue={this.addSizeValue} getsizeValue={this.state.size}/>
         </View>
-        
+        <CheckBocSelect/>
         
       </View>
     );
