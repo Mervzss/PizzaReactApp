@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import PickerInputPart from './PizzaRelated/pickerInput';
-import CheckBocSelect from './PizzaRelated/checkboxSelect'
+import CheckBoxSelect from './PizzaRelated/checkboxSelect'
 // PIZZA ASSETS
 export default class App extends Component {
 
@@ -16,12 +16,15 @@ export default class App extends Component {
     super(props);
     this.state={
       size: null,
-      vegetableToppings:null,
-      nonVegetableToppings: null,
-      Cheese:null,
+      vegetableToppings:[],
+      nonVegetableToppings: [],
+      Cheese:[],
     }
   }
-
+  finaltransval=(name)=>{ 
+    // alert("ywYYW")
+    // this.state.vegetableToppings[0].checkState
+  }
 
   guard =()=> this.state.pizzaSize.map(name =>{
     return(
@@ -34,6 +37,43 @@ export default class App extends Component {
       })
     }
 
+  onaddVegetableToppings=(name,data,checkval)=>{
+    this.setState(prevState=>{
+      return{
+        vegetableToppings: prevState.vegetableToppings.concat({
+          toppings: name,
+          value:data,
+          checkState:checkval
+        })
+      }
+    })
+    var placeholder=0;
+    
+    
+  }
+  onaddNonVegetableToppings=(name,value)=>{
+    this.setState(prevState => {
+      return {
+        vegetableToppings: prevState.vegetableToppings.filter(toppings => {
+          return toppings.name !== name;
+          
+        })
+      };
+    });
+  }
+  onaddCheese=(name,value)=>{
+    
+  }
+  removeVegetableToppings=(name,value)=>{
+
+  }
+  removeNonVegetableToppings=(name,value)=>{
+  }
+  removeCheese=()=>{
+
+  }
+    
+
   render() {
     return (
       <View style={styles.container}>
@@ -42,7 +82,15 @@ export default class App extends Component {
         <Text style={styles.pickerText}>Size:</Text>
         <PickerInputPart sizeValue={this.addSizeValue} getsizeValue={this.state.size}/>
         </View>
-        <CheckBocSelect/>
+        <CheckBoxSelect
+        transval={this.finaltransval}
+        addVegetableToppings={this.onaddVegetableToppings}
+        addNonVegetableToppings={this.onaddNonVegetableToppings}
+        addCheese={this.onaddCheese}
+        removeVegetableToppings={this.onremoveVegetableToppings}
+        removeNonVegetableToppings={this.onremoveNonVegetableToppings}
+        removeCheese={this.onremoveCheese}
+        />
         
       </View>
     );
